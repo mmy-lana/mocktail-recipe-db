@@ -1,75 +1,83 @@
-# React + TypeScript + Vite
+# 🍸 Velvet & Gold — Mocktail Recipe Database
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A luxury non-alcoholic mixology database built with a trendy dark gold lounge aesthetic. Designed using **React 19**, **TypeScript**, and **Tailwind CSS**, strictly curated for 100% Halal-compliant non-alcoholic recipes.
 
-Currently, two official plugins are available:
+🌐 **Live Demo:** [mocktail-recipe-db.vercel.app](https://mocktail-recipe-db.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **100% Halal Guaranteed:** Zero alcohol, zero-proof botanical extracts, natural fruit reductions, and halal-certified syrups only.
+- **Dark Gold Lounge Aesthetic:** Custom high-contrast theme engineered for a premium bar atmosphere.
+- **Atomic & Domain-Driven Design:** Clear separation between global UI primitives (Atoms, Molecules, Organisms) and feature domains (`recipes`, `ingredients`).
+- **Debounced Search:** Instant client-side search across recipe titles, botanical ingredients, and flavor profiles using `useDebounce`.
+- **Category Filters:** Seamless category navigation across *Signature*, *Sparkling*, *Herbal & Botanical*, and *Smoked & Spiced* collections.
+- **Detailed Recipe Modal:** Step-by-step mixology steps, specific glassware specs, preparation times, and detailed ingredient breakdowns.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Framework:** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Deployment:** [Vercel](https://vercel.com/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
 
+### Prerequisites
+
+Ensure you have Node.js 18+ and npm installed.
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/mocktail-recipe-db.git
+
+# Navigate to project directory
+cd mocktail-recipe-db
+
+# Install dependencies
+npm install
+
+# Start local development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Build for Production
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run build
 ```
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/          # Atomic components (Atoms, Molecules, Organisms)
+│   ├── atoms/           # Button, Input, Badge
+│   ├── molecules/       # Card, SearchBar
+│   └── organisms/       # Header, Footer
+├── features/            # Domain-driven features
+│   ├── ingredients/     # Types and IngredientList UI
+│   └── recipes/         # Types, Mock API, Hooks (useRecipes), RecipeCard & RecipeGrid
+├── hooks/               # Custom hooks (useDebounce)
+├── layouts/             # Page layouts (RootLayout)
+├── pages/               # Views (HomePage, RecipeDetailPage modal)
+├── styles/              # Global styles & Tailwind entrypoint
+├── utils/               # Formatting functions
+└── main.tsx             # Application entrypoint
+```
+
+---
+
+## 📄 License
+
+Distributed under the MIT License.
