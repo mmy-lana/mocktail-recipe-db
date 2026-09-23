@@ -37,7 +37,7 @@ Ensure you have Node.js 18+ and npm installed.
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/mocktail-recipe-db.git
+git clone https://github.com/mmy-lana/mocktail-recipe-db.git
 
 # Navigate to project directory
 cd mocktail-recipe-db
